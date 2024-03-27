@@ -11,10 +11,19 @@ const Hero = () => {
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.up("xs")]: {
+      // MAIOR ou IGUAL a mobile
+      paddingTop: "100px",
+    },
+
+    [theme.breakpoints.up("md")]: {
+      // MENOR ou IGUAL a mobile
+      paddingTop: "0px",
+    },
   }));
 
   const StyledImg = styled("img")(({ theme }) => ({
-    width: "70%",
+    width: "65%",
     borderRadius: "100%",
     border: `1px solid ${theme.palette.primary.contrastText}`,
   }));
